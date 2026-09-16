@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Walking Skeleton - Login</title>
+</head>
+<body>
+  <h2>Đăng nhập</h2>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button id="btn">Login</button>
+  <p id="result"></p>
+
+  <script src="login.js"></script>
+  <script>
+    document.getElementById('btn').onclick = () => {
+      const ok = login(
+        document.getElementById('user').value,
+        document.getElementById('pass').value
+      );
+      document.getElementById('result').textContent = ok ? 'Đăng nhập thành công' : 'Sai thông tin';
+    };
+  </script>
+</body>
+</html>
